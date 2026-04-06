@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 프로필</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; }
+        header { background: #333; color: #fff; padding: 1rem 0; text-align: center; }
+        nav { background: #444; color: #fff; padding: 0.5rem; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #ffeb3b; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; background: #fff; margin-top: 20px; border-radius: 8px; }
+        .profile-header { display: flex; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; background: #ddd; margin-right: 30px; }
+        section { margin-top: 20px; }
+        h2 { color: #333; border-left: 5px solid #333; padding-left: 10px; }
+        .tag-box { display: flex; gap: 10px; flex-wrap: wrap; }
+        .tag { background: #e0e0e0; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Developer Profile</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/" target="_blank">GitHub</a> </nav>
+
+    <div class="container">
+        <section id="about" class="profile-header">
+            <div class="profile-img"></div> <div>
+                <h2>안녕하세요, 개발자입니다.</h2>
+                <p>끊임없이 학습하고 문제를 해결하는 과정에서 즐거움을 느낍니다.<br>
+                현재 멀티플레이어 환경 구현 및 디지털 사운드 시스템 활용에 관심을 두고 프로젝트를 진행 중입니다.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="tag-box">
+                <span class="tag">C# / Unity</span>
+                <span class="tag">Photon Fusion</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">Digital Audio Workstation</span>
+                <span class="tag">Git</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Multiplayer Game Login System</strong>
+                    <p>Photon Fusion을 활용한 실시간 세션 관리 및 사용자 인증 시스템 구축</p>
+                </li>
+                <li>
+                    <strong>Digital Guitar Effectors Setup</strong>
+                    <p>VST 플러그인을 활용한 디지털 레코딩 및 사운드 체인 최적화</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
