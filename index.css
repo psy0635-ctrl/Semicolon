@@ -1,0 +1,484 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #3b49df;
+    color: #111;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   1. 네비게이션 바
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #3b49df;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 4px solid #000;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    border-right: 4px solid #000;
+}
+
+.point {
+    color: #ff1493;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 0 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.talk-btn {
+    border-left: 4px solid #000;
+    background-color: #5555ff;
+}
+
+/* =========================================
+   2. 헤더 영역
+   ========================================= */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 70px;
+    background-color: #3b49df;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 40%;
+    animation: rotateWave 15s infinite linear;
+}
+
+.wave1 {
+    top: -100%;
+    left: -50%;
+    animation-duration: 20s;
+}
+
+.wave2 {
+    top: -120%;
+    left: -30%;
+    background-color: rgba(0, 0, 0, 0.05);
+    animation-duration: 15s;
+    animation-direction: reverse;
+}
+
+@keyframes rotateWave {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: 30px;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-left-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 4px solid #000;
+    border-radius: 16px;
+    padding: 60px 50px;
+    width: 50%;
+    box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 100px;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.dashed-divider {
+    border-top: 4px dashed #000;
+    margin: 30px 0;
+}
+
+.hero-desc {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #111;
+    font-weight: bold;
+}
+
+.hero-right-visual {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -110px;
+}
+
+.giant-semicolon {
+    font-family: 'Georgia', serif;
+    font-size: 650px;
+    font-weight: 900;
+    color: #ff0088;
+    line-height: 0.8;
+    text-shadow: 25px 25px 0px rgba(28, 231, 14, 0.5);
+}
+
+.blink-effect {
+    animation: softBlink 2.5s infinite alternate;
+}
+
+@keyframes softBlink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+}
+
+/* =========================================
+   3. 동아리 소개 영역
+   ========================================= */
+.about-section {
+    position: relative;
+    padding: 120px 40px;
+    background: repeating-linear-gradient(-45deg, #111, #111 20px, #1a1a1a 20px, #1a1a1a 40px);
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1300px;
+    border: 4px solid #000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 15px 15px 0px #ff1493;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    padding: 80px 60px;
+}
+
+.about-heading {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 100px;
+    letter-spacing: -2px;
+}
+
+.about-col-text h3,
+.about-col-list h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+
+.about-col-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.about-col-list ul {
+    list-style: none;
+    font-size: 16px;
+    line-height: 2;
+    color: #333;
+    font-weight: bold;
+}
+
+.about-footer-banner {
+    border-top: 4px solid #000;
+    background-color: #fff;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 40px;
+    color: #000;
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* =========================================
+   4. 팀원 소개 영역
+   ========================================= */
+.members-section {
+    padding: 120px 0;
+    background-color: #3b49df;
+}
+
+.page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.member-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.hanging-wire {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #111;
+    z-index: 0;
+}
+
+/* 카드 기본 설정: 양수 기울기 적용 및 반투명 검은 그림자 설정 */
+.member-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    border-radius: 20px;
+    border: 4px solid #000;
+    background-color: #000;
+    overflow: hidden;
+    transform: rotate(2deg);
+    /* 기본시 오른쪽 기울기 */
+    box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.3);
+    /* 변경된 반투명 검은색 그림자 */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease;
+}
+
+/* 카드 호버 설정: 음수 기울기로 반전 및 클릭되는 듯한 애니메이션 적용 */
+.member-card:hover {
+    transform: rotate(-2deg) translate(8px, 8px);
+    /* 호버시 왼쪽으로 반전되며 눌림 */
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.3);
+    background-color: #000;
+    z-index: 5;
+}
+
+.card-pin {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 35px;
+    background-color: #ddd;
+    border: 4px solid #000;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* 카드 상단 영역 */
+.card-top {
+    background-color: #000;
+    padding: 50px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #000;
+    transition: background-color 0.2s ease;
+}
+
+/* 호버 시: 상단 영역의 배경색을 각 테마 색상으로 반전 */
+.member-card:hover .card-top {
+    background-color: var(--theme-color);
+}
+
+.role-badge {
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+}
+
+/* 호버 시: 뱃지 색상을 검은색으로 반전 */
+.member-card:hover .role-badge {
+    background-color: #000;
+    color: var(--theme-color);
+}
+
+.huge-text {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 90px;
+    color: var(--theme-color);
+    letter-spacing: -3px;
+    line-height: 1;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* 호버 시: 큰 텍스트를 검은색으로 반전 */
+.member-card:hover .huge-text {
+    color: #000;
+}
+
+/* 카드 하단 영역 */
+.card-bottom {
+    background-color: var(--theme-color);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: background-color 0.2s ease;
+}
+
+/* 호버 시: 하단 영역의 배경색을 검은색으로 반전 */
+.member-card:hover .card-bottom {
+    background-color: #fff;
+}
+
+.service-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.korean-name {
+    font-size: 32px;
+    font-weight: 900;
+    color: #000;
+    transition: color 0.2s ease;
+}
+
+/* 호버 시: 이름 및 라벨을 테마 색상으로 반전 */
+.member-card:hover .service-label,
+.member-card:hover .korean-name {
+    color: var(--theme-color);
+}
+
+/* 프로필 버튼 */
+.profile-btn {
+    display: inline-block;
+    padding: 15px 0;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-top: 3px solid #000;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+}
+
+/* 호버 시: 버튼 색상을 테마 색상으로 반전 */
+.member-card:hover .profile-btn {
+    color: var(--theme-color);
+    border-top-color: var(--theme-color);
+}
+
+.member-card:hover .profile-btn:hover {
+    background-color: var(--theme-color);
+    color: #000;
+    padding-left: 15px;
+    border-radius: 8px;
+    border-top-color: transparent;
+}
